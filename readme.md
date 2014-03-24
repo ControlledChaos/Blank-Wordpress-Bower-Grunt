@@ -22,7 +22,7 @@ This is my own blank Wordpress theme. It uses Bootstrap 3.0 with Grunt and is me
 
 #### Basic Extras
 
-	* Portfolio page type
+	* Portfolio Custom Post Type
 	* Recent Portfolio Widget
 
 
