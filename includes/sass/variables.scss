@@ -29,5 +29,22 @@
 		letter-spacing: -0.08em;
 	}
 
+	@mixin responsive( $screen_type ) {
+
+		@if $screen_type == desktop {
+
+			@media ( max-width: 1220px ) { @content; }
+			
+		} @else if  $screen_type == tablet{
+
+			@media ( max-width: 768px ) { @content; }
+			
+		} @else if $screen_type == mobile {
+				
+				@media ( /* Mobile and up */ min-width: 479px ) and ( max-width: 767px ) { @content; }
+
+		}
+	}
+
 
 
