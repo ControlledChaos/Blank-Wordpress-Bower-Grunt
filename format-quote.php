@@ -3,10 +3,12 @@
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php get_template_part('format','post_thumbnail'); ?>
 	
 	<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	
-	<div class="quote-entry entry-content">
+	<div class="quote-entry entry">
 		<?php the_content(); ?>
 	</div>
 	
