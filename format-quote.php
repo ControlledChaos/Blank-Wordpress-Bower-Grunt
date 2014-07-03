@@ -2,11 +2,11 @@
 <!-- quote post format file	 -->
 
 
-<article class="quote-post post " id="<?php the_ID(); ?>">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
-	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+	<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	
-	<div class="quote-entry entry">
+	<div class="quote-entry entry-content">
 		<?php the_content(); ?>
 	</div>
 	
