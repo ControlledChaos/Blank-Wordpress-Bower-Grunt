@@ -12,6 +12,4 @@ Text Domain: read
 */
 
 
-@import "includes/stylesheets/typography.css";
-@import "includes/stylesheets/shortcode.css";
 @import "includes/stylesheets/screen.css";
