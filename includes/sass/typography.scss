@@ -3,7 +3,6 @@
 /*	Typography Styles
 /*-----------------------------------------------------------------------------------*/
 
-@import "variables";
 @import "compass/css3";
 
 
@@ -11,12 +10,11 @@
 /*	Type Settings(baseline etc)
 /*-----------------------------------------------------------------------------------*/
 
-$baseFontSize: 22;
+$baseFontSize: 12;
 $baseLineHeight: 1.5;
 $leading: $baseLineHeight * 1rem;
 $scale: 1.414;
 
-/*---------------------------------------*/
 
 
 html {
@@ -113,6 +111,7 @@ blockquote {
 
 a {
 	@include transition(0.15s);
+	
 	&:hover {
 		text-decoration: none;
 	}
