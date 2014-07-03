@@ -17,16 +17,17 @@
 
 
 /*-----------------------------------------------------------------------------------*/
-/*	Custom Mixins
+/*	Custom Mixins and Placeholders
 /*-----------------------------------------------------------------------------------*/
 
-	@mixin post-width {
+	%post-width {
 		width: 85%;
 		margin: 0 auto;
 	}
 
-	@mixin letter-spacing {
+	%letter-spacing {
 		letter-spacing: -0.08em;
 	}
+
 
 
