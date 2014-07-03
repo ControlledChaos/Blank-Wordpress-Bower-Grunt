@@ -2,9 +2,11 @@
 <!-- link post format file	 -->
 
 
-<article class="link-post post " id="<?php the_ID(); ?>">
+<article id="post-<?php the_ID(); ?>"  <?php post_class(); ?>>
+
+	<?php get_template_part('format','post_thumbnail'); ?>
 	
-	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+	<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 	
 	<div class="link-entry entry">
 		<?php the_content(); ?>
