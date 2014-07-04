@@ -26,6 +26,7 @@ module.exports = function(grunt) {
                     compass: true,
                 },
                 files: {
+                    'includes/stylesheets/reset.css': 'includes/sass/reset.scss',
                     'includes/stylesheets/screen.css': 'includes/sass/screen.scss',
                     'includes/stylesheets/variables.css': 'includes/sass/variables.scss',
                     'includes/stylesheets/typography.css': 'includes/sass/typography.scss',
