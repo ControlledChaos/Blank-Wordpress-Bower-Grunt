@@ -11,12 +11,13 @@ Tags:        light, dark, white
 Text Domain: read
 */
 
+//	Reset optional - bootstrap is included, use the one where the mood takes you.
+@import "reset";
+
+@import "compass/css3";
 @import "variables";
 @import "typography";
-// @import "compass/css3";
 // @import  "compass/reset";
-
-
 
 /*-----------------------------------------------------------------------------------*/
 /*	Global Styles
