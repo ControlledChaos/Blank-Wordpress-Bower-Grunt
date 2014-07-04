@@ -5,7 +5,6 @@
 
 	$font: 14px/22px "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 
-
 /*-----------------------------------------------------------------------------------*/
 /*	Colours
 /*-----------------------------------------------------------------------------------*/
@@ -28,6 +27,14 @@
 	%letter-spacing {
 		letter-spacing: -0.08em;
 	}
+
+
+	%typeface-main {
+	}
+
+	%typeface-headings {
+	}
+	
 
 	@mixin responsive( $screen_type ) {
 
