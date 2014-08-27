@@ -12,4 +12,4 @@
 
 <?php the_content(); ?>
 
-</article
+</article>
