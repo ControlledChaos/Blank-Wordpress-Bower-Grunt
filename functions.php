@@ -17,7 +17,7 @@
 
 
 /* ******************************************
-	Load all javascipt files
+	Load all Javascipt and CSS files
 	*********************************************/
 
 	add_action('wp_enqueue_scripts','themetacular_load_js'); 
@@ -36,6 +36,9 @@
 	//Custom JS
 		wp_register_script( 'custom_js', get_template_directory_uri() . '/includes/js/custom.js', false, false, true );
 		wp_enqueue_script('custom_js');
+
+		wp_register_style('bootstrap_css', get_template_directory_uri() . '/includes/stylesheets/bootstrap.min.css');
+		wp_enqueue_style('bootstrap_css');
 
 
 	}
