@@ -40,6 +40,8 @@
 		wp_register_style('bootstrap_css', get_template_directory_uri() . '/includes/stylesheets/bootstrap.min.css');
 		wp_enqueue_style('bootstrap_css');
 
+		wp_register_style('wp_default_stylesheet', get_stylesheet_uri() );
+		wp_enqueue_style('wp_default_stylesheet');
 
 	}
 
