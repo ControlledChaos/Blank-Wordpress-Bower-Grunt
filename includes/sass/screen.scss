@@ -1,16 +1,3 @@
-/*
-Theme Name:  Grunt Blan
-Theme URI:   Theme Location
-Author:      Luke Hayes
-Author URI:  http://authoruri.net
-Description: A Lovely Blank Wordpress theme
-Version:     1.0
-License:     License
-License URI: http://themeforest.net/licenses
-Tags:        light, dark, white
-Text Domain: read
-*/
-
 //	Reset optional - bootstrap is included, use the one where the mood takes you.
 // @import "reset";
 // @import  "compass/reset";
@@ -18,6 +5,7 @@ Text Domain: read
 @import "compass/css3";
 @import "variables";
 @import "typography";
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	Global Styles
