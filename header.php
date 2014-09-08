@@ -7,9 +7,6 @@
 
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />	
 	<meta name="generator" content="WordPress <?php bloginfo('version'); ?>" /> <!-- leave this for stats please -->
-	
-	<!-- Sass Bootstrap 3.0 -->
-	<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/includes/stylesheets/sass-bootstrap.css" type="text/css" media="screen" />
 
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 	
