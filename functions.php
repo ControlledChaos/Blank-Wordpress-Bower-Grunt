@@ -12,6 +12,7 @@
 	include('includes/themetacular/custom_post_types.php');
 	include('includes/themetacular/recent_portfolio_widget.php');
 	include('includes/themetacular/shortcodes.php');
+	include('includes/themetacular/template_tags.php');
 
 
 
