@@ -47,68 +47,83 @@ add_action('after_setup_theme', 'tt_theme_setup');
 
 
 
-/* ******************************************
-	Load all Javascipt and CSS files
-	*********************************************/
 
-	function tt_theme_scripts() {
+/**
+ * 	Load all Javascipt and CSS files
+ */
+function tt_theme_scripts() {
 
-		if (is_admin()) return;
+	if (is_admin()) return;
 
-		/**
-		 *  Register jQuery
-		 */
+	/**
+	 *  Register jQuery
+	 */
 
-		wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'jquery' );
 
-		/**
-		 *  Register and enqueue Bookstrap JS
-		 */
-		wp_register_script('bootstrap_js', get_template_directory_uri() . '/includes/js/sass-bootstrap.min.js', false, false , false );
-		wp_enqueue_script('bootstrap_js');
-
-
-		/**
-		 *  Register and enqueue Custom JS file
-		 */
-		wp_register_script( 'custom_js', get_template_directory_uri() . '/includes/js/custom.js', false, false, true );
-		wp_enqueue_script( 'custom_js' );
+	/**
+	 *  Register and enqueue Bookstrap JS
+	 */
+	wp_register_script('bootstrap_js', get_template_directory_uri() . '/includes/js/sass-bootstrap.min.js', false, false , false );
+	wp_enqueue_script('bootstrap_js');
 
 
-
-		/**
-		 *  Register and enqueue Bookstrap CSS
-		 */
-		wp_register_style('bootstrap_css', get_template_directory_uri() . '/includes/stylesheets/bootstrap.min.css');
-		wp_enqueue_style('bootstrap_css');
-
-
-
-		/**
-		 *  Register and enqueue Custrom CSS
-		 */
-		wp_register_style('wp_default_stylesheet', get_stylesheet_uri() );
-		wp_enqueue_style('wp_default_stylesheet');
-
-	}
-
-
-	add_action('wp_enqueue_scripts','tt_theme_scripts');
+	/**
+	 *  Register and enqueue Custom JS file
+	 */
+	wp_register_script( 'custom_js', get_template_directory_uri() . '/includes/js/custom.js', false, false, true );
+	wp_enqueue_script( 'custom_js' );
 
 
 
 	/**
-	 * 
-	 * 	Include all of the custom functionality
-	 * 
+	 *  Register and enqueue Bookstrap CSS
 	 */
+	wp_register_style('bootstrap_css', get_template_directory_uri() . '/includes/stylesheets/bootstrap.min.css');
+	wp_enqueue_style('bootstrap_css');
 
 
-	include('includes/themetacular/post_format_meta_boxes.php');
-	include('includes/themetacular/custom_post_types.php');
-	include('includes/themetacular/recent_portfolio_widget.php');
-	include('includes/themetacular/shortcodes.php');
-	include('includes/themetacular/template_tags.php');
+
+	/**
+	 *  Register and enqueue Custrom CSS
+	 */
+	wp_register_style('wp_default_stylesheet', get_stylesheet_uri() );
+	wp_enqueue_style('wp_default_stylesheet');
+
+}
+
+
+add_action('wp_enqueue_scripts','tt_theme_scripts');
+
+
+
+
+
+/**
+ * Load the comments template if the page is single
+ */
+
+function load_comments_template() {
+
+	if ( is_single() )	 {
+
+		comments_template();
+	}
+
+}
+
+
+
+
+/**
+* 	Include all of the custom functionality
+*/
+
+include('includes/themetacular/post_format_meta_boxes.php');
+include('includes/themetacular/custom_post_types.php');
+include('includes/themetacular/recent_portfolio_widget.php');
+include('includes/themetacular/shortcodes.php');
+include('includes/themetacular/template_tags.php');
 
 
 
