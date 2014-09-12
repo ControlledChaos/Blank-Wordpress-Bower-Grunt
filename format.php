@@ -6,10 +6,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<?php get_template_part('format','post_thumbnail'); ?>
+	<?php get_template_part('format','post_thumbnail'); ?>
 
-<h2><?php the_title() ?></h2>
+	<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 
-<?php the_content(); ?>
+	<?php the_content(); ?>
+
+
+	<?php load_comments_template(); ?>
 
 </article>

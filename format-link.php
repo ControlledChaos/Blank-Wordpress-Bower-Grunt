@@ -12,5 +12,7 @@
 		<?php the_content(); ?>
 	</div>
 	
+	<?php load_comment_template(); ?>
+
 	
 </article> <!-- .post -->
