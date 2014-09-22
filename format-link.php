@@ -1,18 +1,30 @@
+<?php
+/**
+ * This file is runs as the link post format.
+ *
+ * @packaga
+ */
+?>
 
-<!-- link post format file	 -->
 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<article id="post-<?php the_ID(); ?>"  <?php post_class(); ?>>
-
+	
+	<!-- Add the featured image if any -->
 	<?php get_template_part('format','post_thumbnail'); ?>
-	
-	<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-	
-	<div class="link-entry entry">
-		<?php the_content(); ?>
-	</div>
-	
-	<?php load_comment_template(); ?>
 
-	
-</article> <!-- .post -->
+	<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+
+	<!-- Get our post meta -->
+	<?php get_template_part('format','meta'); ?>
+
+	<div class="link-entry entry">
+
+		<?php the_content(); ?>
+		
+	</div>
+
+	<!-- Load the comments template -->
+	<?php load_comments_template(); ?>
+
+</article>
