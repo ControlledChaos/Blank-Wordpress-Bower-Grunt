@@ -27,8 +27,7 @@ module.exports = function(grunt) {
                 },
                 files: {
                     // 'includes/stylesheets/reset.css': 'includes/sass/reset.scss',
-                    'includes/stylesheets/main.css': 'includes/sass/main.scss',
-                    'includes/stylesheets/typography.css': 'includes/sass/typography.scss',
+                    'includes/stylesheets/main.css': 'includes/sass/main.scss'
                 }
             } 
         }
