@@ -1,14 +1,30 @@
+<?php
+/**
+ * This file is runs as the audio post format.
+ *
+ * @packaga
+ */
+?>
 
-<!-- audio post format file	 -->
 
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-<article class="audio-post post " id="<?php the_ID(); ?>">
 	
-	<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-	
+	<!-- Add the featured image if any -->
+	<?php get_template_part('format','post_thumbnail'); ?>
+
+	<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+
+	<!-- Get our post meta -->
+	<?php get_template_part('format','meta'); ?>
+
 	<div class="audio-entry entry">
+
 		<?php the_content(); ?>
+		
 	</div>
-	
-	
-</article> <!-- .post -->
+
+	<!-- Load the comments template -->
+	<?php load_comments_template(); ?>
+
+</article>
