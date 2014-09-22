@@ -18,12 +18,11 @@
 	<!-- Get our post meta -->
 	<?php get_template_part('format','meta'); ?>
 
-	<div class="entry">
-		
+	<div class="standard-entry entry">
+
 		<?php the_content(); ?>
 		
 	</div>
-
 
 	<!-- Load the comments template -->
 	<?php load_comments_template(); ?>
