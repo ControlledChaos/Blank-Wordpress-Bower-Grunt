@@ -25,6 +25,6 @@
 	</div>
 
 	<!-- Load the comments template -->
-	<?php load_comments_template(); ?>
+	<?php themetacular_load_comments_template(); ?>
 
 </article>
