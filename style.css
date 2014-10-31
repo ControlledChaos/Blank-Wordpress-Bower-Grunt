@@ -1,5 +1,5 @@
 /*
-Theme Name:  Grunt Blank
+Theme Name:  Bower Test
 Theme URI:   Theme Location
 Author:      Luke Hayes
 Author URI:  http://authoruri.net
@@ -12,4 +12,4 @@ Text Domain: read
 */
 
 
-@import "includes/stylesheets/screen.css";
+@import "includes/stylesheets/main.css";
