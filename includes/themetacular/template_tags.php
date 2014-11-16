@@ -1,7 +1,7 @@
 <?php 
 /**
  * 
- * This file holds custom functions for this theme that I have added to make life easier, if not simpler.
+ * This file holds custom functions for wordpress output to make using the wordpress tags easier
  * 
  * @package awesome
  * 
@@ -101,15 +101,6 @@ if( !function_exists( 'themetacular_the_content' )) {
 	}
 
 }
-
-
-
-
-
-
-
-
-
 
 
 
