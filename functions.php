@@ -69,6 +69,26 @@ function tt_theme_scripts() {
 
 
 	/**
+	 *  Load Pure CSS
+	 */
+	wp_register_style( 'pure_css', get_template_directory_uri() . '/bower_components/pure/pure-min.css', false, false );
+	wp_enqueue_style( 'pure_css' );
+
+
+	/**
+	 *  Load Grids Responsive
+	 */
+	wp_register_style( 'grids_responsive', get_template_directory_uri() . '/bower_components/pure/grids-responsive-min.css', false, false );
+	wp_enqueue_style( 'grids_responsive' );
+
+	/**
+	 *  Load Font-Awesome
+	 */
+	wp_register_style( 'font_awesome', get_template_directory_uri() . '/bower_components/font-awesome-bower/css/font-awesome.css', false, false );
+	wp_enqueue_style( 'font_awesome' );
+
+
+	/**
 	 *  Register and enqueue Custrom CSS
 	 */
 	wp_register_style('wp_default_stylesheet', get_stylesheet_uri() );
@@ -84,6 +104,7 @@ add_action('wp_enqueue_scripts','tt_theme_scripts');
 /**
 * 	Include all of the custom functionality
 */
+include('includes/themetacular/themetacular_functions.php');
 include('includes/themetacular/shortcodes.php');
 include('includes/themetacular/template_tags.php');
 
@@ -92,7 +113,7 @@ include('includes/themetacular/template_tags.php');
 
 /*******************************************
 	Silly 404 Excuse
-*********************************************/
+	*********************************************/
 
 	function exclamation() {
 
