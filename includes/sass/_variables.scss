@@ -3,69 +3,86 @@
 /*	Typography
 /*-----------------------------------------------------------------------------------*/
 
-	$font: 14px/22px "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
+$font: 14px/22px "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 
 /*-----------------------------------------------------------------------------------*/
 /*	Colours
 /*-----------------------------------------------------------------------------------*/
 
-	$black: #333;
-	$white: #FFF;
-	$light-grey: #f7f7f7;
-	$dark-grey: #BBB;
-	$accent: #ddd;
+$black: #333;
+$white: #FFF;
+$light-grey: #f7f7f7;
+$dark-grey: #BBB;
+$accent: #ddd;
 
 
 /*-----------------------------------------------------------------------------------*/
 /* Placeholders
 /*-----------------------------------------------------------------------------------*/
 
-	%post-width {
-		width: 85%;
-		margin: 0 auto;
-	}
+%post-width {
+	width: 85%;
+	margin: 0 auto;
+}
 
-	%letter-spacing {
-		letter-spacing: -0.08em;
-	}
+%letter-spacing {
+	letter-spacing: -0.08em;
+}
 
 
-	%typeface-main {
-	}
+%typeface-main {
+}
 
-	%typeface-headings {
-	}
+%typeface-headings {
+}
 
-	%typeface-color-main {
+%typeface-color-main {
 
-	}
+}
 
-	%typeface-color-accent {
+%typeface-color-accent {
 
-	}
+}
 
 
 /*-----------------------------------------------------------------------------------*/
 /*	Mixins
 /*-----------------------------------------------------------------------------------*/
-	
 
-	@mixin responsive( $screen_type ) {
 
-		@if $screen_type == desktop {
+@mixin responsive( $screen_type ) {
 
-			@media ( max-width: 1220px ) { @content; }
-			
+	@if $screen_type == desktop {
+
+		@media ( max-width: 1220px ) { @content; }
+
 		} @else if  $screen_type == tablet{
 
 			@media ( max-width: 768px ) { @content; }
 			
-		} @else if $screen_type == mobile {
+			} @else if $screen_type == mobile {
 				
 				@media ( /* Mobile and up */ min-width: 479px ) and ( max-width: 767px ) { @content; }
 
+			}
 		}
-	}
+
+@mixin pad_top_bottom($top, $bottom) {
+
+	padding-top: $top+px;
+	padding-bottom: $bottom+px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
