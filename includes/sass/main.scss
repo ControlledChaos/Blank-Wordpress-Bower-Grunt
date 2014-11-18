@@ -1,106 +1,111 @@
-//	Reset optional - bootstrap is included, use the one where the mood takes you.
-// @import "reset";
 // @import  "compass/reset";
 
+// @import "compass/";
 @import "compass/css3";
 @import "variables";
 
 /* --------------------------------------------------------------
 TABLE OF CONTENTS
 ----------------------------------------------------------------
-1.0 - Typography
+1.0 - Document Setup
 2.0 - Global Styles
+3.0 - Structure Styles
 3.0 - Header Styles
 4.0 - Post Styles
+4.0 - Page Styles
 5.0 - Comment Styles
 6.0 - Archive Styles
 7.0 - Footer Styles
 -------------------------------------------------------------- */
 
 /*-----------------------------------------------------------------------------------*/
-/*	1.0 Typography
+/*	1.0 Document Setup
 /*-----------------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------------*/
-/*	Type Settings(baseline etc)
-/*-----------------------------------------------------------------------------------*/
-
-$baseFontSize: 14;
-$baseLineHeight: 1.5;
-$leading: $baseLineHeight * 1rem;
-$scale: 1.414;
-
-
-html, body, button, input, select, textarea  {
-	font-size: $baseFontSize / 16 * 100%;
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+  // font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  // height: 100%;
+}
+
+body {
+  background: #fff;
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+
+body,button,input,select,textarea {
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 1.4em;
+}
+
+
+/*-----------------------------------------------------------------------------------*/
+/* 2.0 Global Styles
+/*-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/*	Global Heading Styles
+/*-----------------------------------------------------------------------------------*/
 
 
 h1, h2, h3, h4, h5, h6 {
-
-	font-weight: 700;
-	line-height: $leading;
-	margin-top: $leading;
-	margin-bottom: 10px;
+  clear: both;
+  font-weight: bold;
+  margin-bottom: 1em;
 }
 
-
-/*-----------------------------------------------------------------------------------*/
-/*	Heading Styles
-/*-----------------------------------------------------------------------------------*/
-
 h1 {
-
-	font-size: 3 * $scale * 1rem;
-	line-height: 3 * $leading;
-	margin-top: 2 * $leading;
+  font-size: 32px;
+  font-size: 3.2rem;
+  margin-bottom: 3rem;
 }
 
 h2 {
-
-	font-size: 2 * $scale * 1rem;
-	line-height: 2 * $leading;
-	margin-top: 2 * $leading;
-
+  font-size: 26px;
+  font-size: 2.6rem;
 }
 
 h3 {
-
-	font-size: 1 * $scale * 1rem;
+  font-size: 21px;
+  font-size: 2.1rem;
 }
 
 h4 {
-
-	font-size: $scale / 2 * 1rem;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 h5 {
-
-	font-size: $scale / 3 * 1rem;
+  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 h6 {
-
-	font-size: $scale / 4 * 1rem;
+  font-size: 14px;
+  font-size: 1.4rem;
 }
 
 
-
 /*-----------------------------------------------------------------------------------*/
-/*	Text Styles
+/*	Global Text Styles
 /*-----------------------------------------------------------------------------------*/
 
 p, span {
-
-	font-size: $leading;
-
+	margin-bottom: 2em;
 }
 
+span {}
+
 blockquote {
-	line-height: $leading;
-	margin-top: $leading;
-	margin-bottom: $leading;
-	padding-top: $leading;
-	padding-bottom: $leading;
+  @include border('left', 30, 'solid', $black);
 }
 
 
@@ -109,39 +114,53 @@ blockquote {
 /*-----------------------------------------------------------------------------------*/
 
 code, kbd, tt, var {
- 	 font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
- }
+ font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
 
 
 /*-----------------------------------------------------------------------------------*/
 /*	Anchor Tag Styles
 /*-----------------------------------------------------------------------------------*/
-
 a {
 	@include transition(0.15s);
-	
-	&:hover {
-		text-decoration: none;
-	}
-}
+  // text-decoration: none;
+  color: $black; 
 
+  &:hover {
+    color: $accent;
+  }
+}
 
 
 /*-----------------------------------------------------------------------------------*/
 /*	List Styles
 /*-----------------------------------------------------------------------------------*/
 
-ul{
+ul, ol{
 	list-style: square;
-	 li {
-		// list-style-type: none;
-	}
+  li {
+    list-style-type: none;
+  }
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*  3.0 Form Styles
+/*-----------------------------------------------------------------------------------*/
+
+//Global form styles
+form, input,textarea {}
+
+
+header {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 
 /*-----------------------------------------------------------------------------------*/
-/* 	2.0	Global Styles
+/* 	3.0	Structure styles
 /*-----------------------------------------------------------------------------------*/
+
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -167,27 +186,5 @@ ul{
 /*-----------------------------------------------------------------------------------*/
 /*	7.0 Footer Styles
 /*-----------------------------------------------------------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
