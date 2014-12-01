@@ -115,13 +115,19 @@ blockquote {
   @include border('left', 30, 'solid', $black);
 }
 
+abbr, acronym {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+}
+
+mark, ins {}
 
 
 /*-----------------------------------------------------------------------------------
-	2.3 Anchor Tag Styles
+  2.3 Anchor Tag Styles
 -----------------------------------------------------------------------------------*/
 a {
-	@include transition(0.15s);
+  @include transition(0.15s);
   // text-decoration: none;
   color: $black; 
 
@@ -132,11 +138,11 @@ a {
 
 
 /*-----------------------------------------------------------------------------------
-	2.4 List Styles
+  2.4 List Styles
 -----------------------------------------------------------------------------------*/
 
 ul, ol{
-	list-style: square;
+  list-style: square;
   li {
     list-style-type: none;
   }
@@ -155,6 +161,8 @@ ul, ol{
 code, kbd, tt, var, pre {
  font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 }
+
+
 
 
 
