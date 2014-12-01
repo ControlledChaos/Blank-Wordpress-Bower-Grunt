@@ -133,6 +133,20 @@ sub, sup {
   vertical-align: baseline;
 }
 
+small {
+  font-size: 0.95rem;
+}
+
+big {
+  font-size: 1.7rem;
+}
+
+hr {
+  background-color: $light-grey;
+  height: 1px;
+  height: 1px;
+}
+
 
 /*-----------------------------------------------------------------------------------
   2.3 Anchor Tag Styles
