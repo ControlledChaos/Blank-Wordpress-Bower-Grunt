@@ -5,6 +5,9 @@
 
 $font: 14px/22px "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 
+$main-typeface: "Open Sans";
+$heading-typeface: "Montserrat";
+
 /*-----------------------------------------------------------------------------------*/
 /*	Colours
 /*-----------------------------------------------------------------------------------*/
@@ -12,8 +15,8 @@ $font: 14px/22px "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, San
 $black: #333;
 $white: #FFF;
 $light-grey: #f7f7f7;
-$dark-grey: #BBB;
-$accent: #ddd;
+$dark-grey: #191b20;
+$accent: #32d174;
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -31,17 +34,20 @@ $accent: #ddd;
 
 
 %typeface-main {
+	font-family: $main-typeface;
 }
 
 %typeface-headings {
+	font-family: $heading-typeface;
 }
 
 %typeface-color-main {
-
+	
+	color: $black;
 }
 
 %typeface-color-accent {
-
+	color: $accent;
 }
 
 
@@ -93,6 +99,14 @@ $accent: #ddd;
 	border-#{$direction}:$px+px, $style, $col;
 }
 
+@include typeface-color-main() {
+
+	color: $black;
+}
+
+@include typeface-color-accent() {
+	color: $accent;
+}
 
 
 
