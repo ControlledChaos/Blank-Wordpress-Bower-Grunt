@@ -5,8 +5,7 @@
 
 $font: 14px/22px "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 
-$main-typeface: "Open Sans";
-$heading-typeface: "Montserrat";
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	Colours
@@ -16,7 +15,7 @@ $black: #333;
 $white: #FFF;
 $light-grey: #f7f7f7;
 $dark-grey: #191b20;
-$accent: #32d174;
+
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -34,11 +33,11 @@ $accent: #32d174;
 
 
 %typeface-main {
-	font-family: $main-typeface;
+
 }
 
 %typeface-headings {
-	font-family: $heading-typeface;
+
 }
 
 %typeface-color-main {
