@@ -99,12 +99,12 @@ $accent: #32d174;
 	border-#{$direction}:$px+px, $style, $col;
 }
 
-@include typeface-color-main() {
+@mixin typeface-color-main() {
 
 	color: $black;
 }
 
-@include typeface-color-accent() {
+@mixin typeface-color-accent() {
 	color: $accent;
 }
 
