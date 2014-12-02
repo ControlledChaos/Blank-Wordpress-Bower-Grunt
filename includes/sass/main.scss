@@ -197,7 +197,21 @@ code, kbd, tt, var, pre {
   2.6 Form Styles
 -----------------------------------------------------------------------------------*/
 
-form, input,textarea {}
+form {
+
+  input,textarea {
+    border: 1px solid $light-grey;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+textarea {
+  resize: none;
+}
+
 
 
 /*-----------------------------------------------------------------------------------
