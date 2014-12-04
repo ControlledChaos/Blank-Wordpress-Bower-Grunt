@@ -152,9 +152,9 @@ hr {
   2.3 Anchor Tag Styles
   -----------------------------------------------------------------------------------*/
   a {
-    @include transition(0.15s);
-  // text-decoration: none;
-  color: $black; 
+    @extend %transition;
+    // text-decoration: none;
+    color: $black;
 
   &:hover {
     color: $accent;
@@ -212,6 +212,17 @@ button, input, textarea {
 
 input,textarea {
   border: 1px solid $light-grey;
+  @extend %transition;
+  &:focus {
+    outline: none;
+    border-color: $dark-grey;
+  }
+}
+
+input, input[type=text], input[type=email], input[type=url], input[type=password], input[type=search] {
+  border: 1px solid $light-grey;
+  @extend %transition;
+
   &:focus {
     outline: none;
     border-color: $dark-grey;
