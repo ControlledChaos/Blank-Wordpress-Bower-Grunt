@@ -111,8 +111,16 @@ body,button,input,select,textarea {
 
  span {}
 
- blockquote {
+ blockquote, q {
   @include border('left', 30, 'solid', $black);
+
+  &:before {
+    content:"";
+  }
+
+  &:after {
+    content: "";
+  }
 }
 
 abbr, acronym {
