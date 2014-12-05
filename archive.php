@@ -62,15 +62,9 @@
 
 	<?php while(have_posts()) : the_post(); ?>
 
-		<article class="post" id="<?php the_ID(); ?>">
 
-			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+		<?php get_template_part('format', get_post_type()); ?>
 
-			<div class="entry">
-				<?php the_content(); ?>
-			</div>
-
-		</article> <!-- .post -->
 
 	<?php endwhile; else : ?>
 
