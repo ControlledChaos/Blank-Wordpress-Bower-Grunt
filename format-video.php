@@ -6,9 +6,7 @@
  */
 ?>
 
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 	
 	<!-- Add the featured image if any -->
 	<?php get_template_part('format','post_thumbnail'); ?>
@@ -21,7 +19,6 @@
 			</a>
 		</h1>
 	</header>
-
 
 	<!-- Get our post meta -->
 	<?php get_template_part('format','meta'); ?>
