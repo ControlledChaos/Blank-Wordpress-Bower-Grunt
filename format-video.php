@@ -13,6 +13,7 @@
 	<!-- Add the featured image if any -->
 	<?php get_template_part('format','post_thumbnail'); ?>
 
+	<!-- Wrap the title in a header tag -->
 	<header class="post-header">
 		<h1>
 			<a href="<?php the_permalink() ?>">
