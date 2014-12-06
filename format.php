@@ -2,7 +2,7 @@
 /**
  * This file is runs as the standard post format.
  *
- * @packaga
+ * @package
  */
 ?>
 
