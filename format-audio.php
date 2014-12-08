@@ -2,13 +2,12 @@
 /**
  * This file is runs as the audio post format.
  *
- * @packaga
+ * @package
  */
 ?>
 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 	
 	<!-- Add the featured image if any -->
 	<?php get_template_part('format','post_thumbnail'); ?>
@@ -18,10 +17,10 @@
 	<!-- Get our post meta -->
 	<?php get_template_part('format','meta'); ?>
 
-	<div class="audio-entry entry">
 
+	<!-- Get the content of our post -->
+	<div class="audio-entry entry">
 		<?php the_content(); ?>
-		
 	</div>
 
 	<!-- Load the comments template -->

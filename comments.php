@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package Editor
+ * @package Themetacular
  */
 
 /*
@@ -65,6 +65,13 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'themetacular' ); ?></p>
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	<?php 
+		comment_form();
+	?>
 
 </div><!-- #comments -->
+
+
+
+
+select ngModel="string" name="string" required ngRequired="string" ngOptions="comprehension_expression"></select>

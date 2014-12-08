@@ -16,27 +16,24 @@
 		<?php while(have_posts()) : the_post(); ?>
 
 			<?php 
-
 			/**
 			 *  Will try to find a format-POST_TYPE.php file, if not, will just run format.php (ie, standard post);
 			 */
-
 			?>
-
+			
+			<!-- Get our the posts that are available -->
 			<?php get_template_part( 'format', get_post_format() ); ?>
 
-
 		<?php endwhile; else : ?>
-
-		<?php get_template_part('format', 'none'); ?>
+		
+			<!-- If there isn't any posts, load this one -->
+			<?php get_template_part('format', 'none'); ?>
 
 	<?php endif; ?>
 
 	<?php post_nav_links(); ?>
 
 </main>
-
-
 
 <?php get_sidebar(); ?>
 

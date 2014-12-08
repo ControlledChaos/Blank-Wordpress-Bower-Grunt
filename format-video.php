@@ -6,18 +6,24 @@
  */
 ?>
 
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
 	
 	<!-- Add the featured image if any -->
 	<?php get_template_part('format','post_thumbnail'); ?>
 
-	<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+	<!-- Wrap the title in a header tag -->
+	<header class="post-header">
+		<h1>
+			<a href="<?php the_permalink() ?>">
+				<?php the_title(); ?>
+			</a>
+		</h1>
+	</header>
 
 	<!-- Get our post meta -->
 	<?php get_template_part('format','meta'); ?>
 
+	<!-- Get the content for our video post -->
 	<div class="video-entry entry">
 
 		<?php the_content(); ?>
