@@ -1,6 +1,10 @@
-
-<!-- status post format file	 -->
-
+<?php
+/**
+ * This file is runs as the status post format.
+ *
+ * @package
+ */
+?>
 
 <article id="post-<?php the_ID(); ?>"  <?php post_class(); ?>>
 
@@ -16,12 +20,10 @@
 		</h1>
 	</header>
 
-	
 	<!-- Get the content for out post -->
 	<div class="status-entry entry">
 		<?php the_content(); ?>
 	</div>
-
 
 	<!-- Load the comments template -->
 	<?php themetacular_load_comments_template(); ?>
