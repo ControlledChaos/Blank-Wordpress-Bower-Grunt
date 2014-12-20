@@ -13,8 +13,7 @@
 	<?php wp_head(); ?>
 
 </head>
-
-<body>
+<body <?php body_class(); ?> >
 
 <header>
 	<h1><?php bloginfo('name'); ?></h1>	
