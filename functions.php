@@ -1,16 +1,14 @@
 <?php 
 
-/**
- * 
+/************************************************************
  *  Functions for the theme
- * 
  * 	@package awesome
- */
+************************************************************/
 
 
-/**
+/************************************************************
  * Setup default parts of the theme (menues, post types etc)
- */
+***********************************************************/
 function tt_theme_setup() {
 
 	/**
@@ -48,9 +46,9 @@ add_action('after_setup_theme', 'tt_theme_setup');
 
 
 
-/**
+/************************************************************
  * 	Load all Javascipt and CSS files
- */
+************************************************************/
 function tt_theme_scripts() {
 
 	if (is_admin()) return;
@@ -101,19 +99,20 @@ add_action('wp_enqueue_scripts','tt_theme_scripts');
 
 
 
-/**
+/************************************************************
 * 	Include all of the custom functionality
-*/
-include('includes/themetacular/themetacular_functions.php');
+************************************************************/
 include('includes/themetacular/shortcodes.php');
 include('includes/themetacular/template_tags.php');
+// include('includes/themetacular/themetacular_customizer.php');
 
 
 
 
-/*******************************************
+
+/************************************************************
 	Silly 404 Excuse
-	*********************************************/
+************************************************************/
 
 	function exclamation() {
 
