@@ -5,8 +5,8 @@
 
 $font: 14px/22px "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 
-$main-typeface: "";
-$heading-typeface: "";
+$main-typeface: "Roboto";
+$heading-typeface: "Roboto";
 
 /*-----------------------------------------------------------------------------------*/
 /*	Colours
@@ -37,7 +37,7 @@ $accent: "";
 	font-family: $main-typeface;
 }
 
-%typeface-headings {
+%typeface-heading {
 	font-family: $heading-typeface;
 }
 
@@ -54,11 +54,15 @@ $accent: "";
 	@include transition(0.12s);
 }
 
+%center {
+
+	text-align: center;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	Mixins
 /*-----------------------------------------------------------------------------------*/
-
 
 @mixin responsive( $screen_type ) {
 
