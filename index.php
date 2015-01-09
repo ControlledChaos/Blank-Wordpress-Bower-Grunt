@@ -9,13 +9,17 @@
 
 <?php get_header(); ?>
 
-<main id="main">
 
-	<?php if(have_posts()) :?> 
+<div class="pure-g">
+	<div class="pure-u-1 pure-u-md-1">
+	
+		<main id="main">
 
-		<?php while(have_posts()) : the_post(); ?>
+			<?php if(have_posts()) :?> 
 
-			<?php 
+				<?php while(have_posts()) : the_post(); ?>
+
+					<?php 
 			/**
 			 *  Will try to find a format-POST_TYPE.php file, if not, will just run format.php (ie, standard post);
 			 */
@@ -26,14 +30,22 @@
 
 		<?php endwhile; else : ?>
 		
-			<!-- If there isn't any posts, load this one -->
-			<?php get_template_part('format', 'none'); ?>
+		<!-- If there isn't any posts, load this one -->
+		<?php get_template_part('format', 'none'); ?>
 
 	<?php endif; ?>
 
 	<?php post_nav_links(); ?>
 
 </main>
+
+
+
+</div>
+</div>
+
+
+
 
 <?php get_sidebar(); ?>
 
