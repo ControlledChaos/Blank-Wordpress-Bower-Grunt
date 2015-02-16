@@ -5,9 +5,7 @@ function themetacular_customizer_settings( $wp_customize ) {
 
 
 /**************************************
-*
 *   Header Background Colour
-*
 ***************************************/
 
 
@@ -29,13 +27,11 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'head
     ) ) );
 
 
+
+
 /**************************************
-*
 *   Body Background Colour
-*
 ***************************************/
-
-
 
 $wp_customize->add_setting( 'body_background_color' , array(
     'default'     => '#FFF',
@@ -57,9 +53,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'body
 
 
 /**************************************
-*
 *   Paragraph Colour
-*
 ***************************************/
 
 
@@ -88,6 +82,11 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'para
 add_action( 'customize_register', 'themetacular_customizer_settings' );
 
 
+
+
+/**************************************
+*   Add styles to head of theme
+***************************************/
 function themetacular_customizer_styles()
 {
     ?>
