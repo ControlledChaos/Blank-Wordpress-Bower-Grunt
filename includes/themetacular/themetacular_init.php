@@ -8,17 +8,17 @@
 /************************************************************
 *  Tags that make current wp functions easier/better
 ************************************************************/
-require('includes/themetacular/template_tags.php');
+include(get_template_directory() .'/includes/themetacular/template_tags.php');
 
 /************************************************************
 *  Themetacular shortcodes
 ************************************************************/
-require('includes/themetacular/shortcodes.php');
+include(get_template_directory() .'/includes/themetacular/shortcodes.php');
 
 
 /************************************************************
 *   Include all of the custom functionality
 ************************************************************/
-require('includes/themetacular/themetacular_customizer.php');
+include(get_template_directory() .'/includes/themetacular/themetacular_customizer.php');
 
 
