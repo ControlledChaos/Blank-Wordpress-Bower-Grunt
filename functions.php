@@ -6,6 +6,7 @@
 ************************************************************/
 
 
+
 /************************************************************
  * Setup default parts of the theme (menues, post types etc)
 ***********************************************************/
@@ -40,8 +41,13 @@ function tt_theme_setup() {
 
 }
 
-
 add_action('after_setup_theme', 'tt_theme_setup');
+
+
+/************************************************************
+ * Load themetacular specific files
+************************************************************/
+include get_template_directory() . "/includes/themetacular/themetacular_init.php";
 
 
 
@@ -96,7 +102,6 @@ function tt_theme_scripts() {
 
 
 add_action('wp_enqueue_scripts','tt_theme_scripts');
-
 
 
 
