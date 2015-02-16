@@ -99,15 +99,6 @@ add_action('wp_enqueue_scripts','tt_theme_scripts');
 
 
 
-/************************************************************
-* 	Include all of the custom functionality
-************************************************************/
-include('includes/themetacular/shortcodes.php');
-include('includes/themetacular/template_tags.php');
-// include('includes/themetacular/themetacular_customizer.php');
-
-
-
 
 
 /************************************************************
