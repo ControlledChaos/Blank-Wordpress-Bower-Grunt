@@ -11,7 +11,7 @@
 
 <div class="pure-g">
 	<div class="pure-u-1 pure-u-md-1">
-	
+
 		<main id="main">
 
 			<?php if(have_posts()) :?> 
@@ -40,10 +40,8 @@
 
 
 
-</div>
-</div>
-
-
+</div><!-- 	pure-u-md-1 -->
+</div> <!-- pure-g -->
 
 
 <?php get_sidebar(); ?>
