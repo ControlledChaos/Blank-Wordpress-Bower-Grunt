@@ -11,7 +11,8 @@
 	</div>
 	
 	<div class="gallery-entry entry">
-		<?php the_content(); ?>
+		<!-- themetacular_the_content makes 'read more' default -->
+		<?php themetacular_the_content(); ?>
 	</div>
 
 	<?php load_comment_template(); ?>

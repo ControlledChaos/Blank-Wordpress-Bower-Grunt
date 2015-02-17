@@ -21,7 +21,8 @@
 	
 	
 	<div class="image-entry entry">
-		<?php the_content(); ?>
+		<!-- themetacular_the_content makes 'read more' default -->
+		<?php themetacular_the_content(); ?>
 	</div>
 
 	<!-- Load the comments template if single -->

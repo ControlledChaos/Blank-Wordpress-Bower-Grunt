@@ -22,7 +22,8 @@
 
 	<!-- The content of our post -->
 	<div class="quote-entry entry">
-		<?php the_content(); ?>
+		<!-- themetacular_the_content makes 'read more' default -->
+		<?php themetacular_the_content(); ?>
 	</div>
 
 	<!-- Get the comments of our post type if we are in single -->

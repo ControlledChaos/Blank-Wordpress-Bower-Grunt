@@ -27,7 +27,8 @@
 	<!-- Get the content of our post -->
 	<div class="standard-entry entry">
 
-		<?php the_content(); ?>
+		<!-- themetacular_the_content makes 'read more' default -->
+		<?php themetacular_the_content(); ?>
 		
 	</div>
 
