@@ -4,6 +4,7 @@
 
 
 
-</div> <!-- #site-wrapper -->
+
+</div> <!-- #site-wrapper: found in header.php -->
 </body>
 </html>
