@@ -1,13 +1,17 @@
 <?php 
 
+/**
+ * All the settings for the Wordpress theme customizer
+ * 
+ * @package awesome
+ */
+
 
 function themetacular_customizer_settings( $wp_customize ) {
-
 
 /**************************************
 *   Header Background Colour
 ***************************************/
-
 
 $wp_customize->add_setting( 'header_textcolor' , array(
     'default'     => '#333e49',
