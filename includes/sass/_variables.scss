@@ -5,8 +5,8 @@
 
 $font: 14px/22px "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, Sans-serif;
 
-$main-typeface: "";
-$heading-typeface: "";
+$main-typeface: "Raleway";
+$heading-typeface: "Montserrat";
 
 /*-----------------------------------------------------------------------------------*/
 /*	Colours
@@ -14,9 +14,10 @@ $heading-typeface: "";
 
 $black: #333;
 $white: #FFF;
-$light-grey: #cccccc;
-$dark-grey: #191b20;
-$accent: "";
+$light-grey: #F2F2F2;
+$dark-grey: #1E1E1E;
+$text-grey: #898989;
+$accent: #ed3636;
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -24,7 +25,7 @@ $accent: "";
 /*-----------------------------------------------------------------------------------*/
 
 %post-width {
-	width: 85%;
+	width: 55%;
 	margin: 0 auto;
 }
 
@@ -59,27 +60,45 @@ $accent: "";
 	text-align: center;
 }
 
+%auto {
+	margin: 0 auto;
+}
+
+%text-color {
+	color: $text-grey;
+}
+
 
 /*-----------------------------------------------------------------------------------*/
 /*	Mixins
 /*-----------------------------------------------------------------------------------*/
 
+@mixin post-width-responsive( $pc ) {
+	width: percentage($pc);
+	margin: 0 auto;
+}
+
 @mixin responsive( $screen_type ) {
 
-	@if $screen_type == desktop {
+	@if $screen_type == xl {
 
-		@media ( max-width: 1220px ) { @content; }
+		@media ( min-width: 1220px ) { @content; }
 
-		} @else if  $screen_type == tablet{
+		} @else if  $screen_type == lg {
 
-			@media ( max-width: 768px ) { @content; }
+			@media ( min-width: 768px ) { @content; }
 			
-			} @else if $screen_type == mobile {
+			} @else if $screen_type == md {
 				
-				@media ( /* Mobile and up */ min-width: 479px ) and ( max-width: 767px ) { @content; }
+				@media ( /* Mobile and up */ min-width: 569px ) { @content; }
+
+			} @else if $screen_type == sm {
+				
+				@media ( /* Mobile and up */ min-width: 0px ) { @content; }
 
 			}
 		}
+
 
 
 @mixin pad_top_bottom($top: 0, $bottom: 0) {
@@ -115,17 +134,5 @@ $accent: "";
 @mixin typeface-color-accent() {
 	color: $accent;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
