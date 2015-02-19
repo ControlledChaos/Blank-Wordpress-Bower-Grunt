@@ -1,0 +1,50 @@
+
+@import "variables";
+
+/*-----------------------------------------------------------------------------------*/
+/* Placeholders
+/*-----------------------------------------------------------------------------------*/
+
+%post-width {
+    width: 55%;
+    margin: 0 auto;
+}
+
+%letter-spacing {
+    letter-spacing: -0.08em;
+}
+
+
+%typeface-main {
+    font-family: $main-typeface;
+}
+
+%typeface-heading {
+    font-family: $heading-typeface;
+}
+
+%typeface-color-main {
+    
+    color: $black;
+}
+
+%typeface-color-accent {
+    color: $accent;
+}
+
+%transition {
+    @include transition(0.12s);
+}
+
+%center {
+
+    text-align: center;
+}
+
+%auto {
+    margin: 0 auto;
+}
+
+%text-color {
+    color: $text-grey;
+}
