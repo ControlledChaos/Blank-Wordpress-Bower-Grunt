@@ -1,8 +1,8 @@
 // @import  "compass/reset";
-
-// @import "compass/";
 @import "compass/css3";
 @import "variables";
+@import "placeholders";
+@import "mixins";
 
 /* --------------------------------------------------------------
 TABLE OF CONTENTS
@@ -32,12 +32,12 @@ TABLE OF CONTENTS
 /*	1.0 Base Setup
 /*-----------------------------------------------------------------------------------*/
 * {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
   // font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -45,132 +45,132 @@ html {
 }
 
 body {
-  background: #fff;
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
+	background: #fff;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 
 body,button,input,select,textarea {
-  font-weight: normal;
-  font-size: 14px;
-  font-size: 1.4em;
-  @extend %typeface-main;
+	font-weight: normal;
+	font-size: 14px;
+	font-size: 1.4em;
+	@extend %typeface-main;
 }
 
 /*------------------------------------------------------------------------------------
    2.0 Typography
 -----------------------------------------------------------------------------------
 	2.1 Heading Styles
------------------------------------------------------------------------------------*/
+	-----------------------------------------------------------------------------------*/
 
 
-  h1, h2, h3, h4, h5, h6 {
-    clear: both;
-    font-weight: bold;
-    margin-bottom: 1em;
-    @extend %typeface-heading;
-  }
+	h1, h2, h3, h4, h5, h6 {
+		clear: both;
+		font-weight: bold;
+		margin-bottom: 1em;
+		@extend %typeface-heading;
+	}
 
-  h1 {
-    font-size: 32px;
-    font-size: 3.2rem;
-    margin-bottom: 3rem;
-  }
+	h1 {
+		font-size: 32px;
+		font-size: 3.2rem;
+		margin-bottom: 3rem;
+	}
 
-  h2 {
-    font-size: 26px;
-    font-size: 2.6rem;
-  }
+	h2 {
+		font-size: 26px;
+		font-size: 2.6rem;
+	}
 
-  h3 {
-    font-size: 21px;
-    font-size: 2.1rem;
-  }
+	h3 {
+		font-size: 21px;
+		font-size: 2.1rem;
+	}
 
-  h4 {
-    font-size: 18px;
-    font-size: 1.8rem;
-  }
+	h4 {
+		font-size: 18px;
+		font-size: 1.8rem;
+	}
 
-  h5 {
-    font-size: 16px;
-    font-size: 1.6rem;
-  }
+	h5 {
+		font-size: 16px;
+		font-size: 1.6rem;
+	}
 
-  h6 {
-    font-size: 14px;
-    font-size: 1.4rem;
-  }
+	h6 {
+		font-size: 14px;
+		font-size: 1.4rem;
+	}
 
 
 /*-----------------------------------------------------------------------------------
 	2.2 Text Styles
-  -----------------------------------------------------------------------------------*/
+	-----------------------------------------------------------------------------------*/
 
-  p, span {
-   margin-bottom: 2em;
- }
+	p, span {
+		margin-bottom: 2em;
+	}
 
- span {}
+	span {}
 
- blockquote, q {
-  @include border('left', 30, 'solid', $black);
+	blockquote, q {
+		@include border('left', 30, 'solid', $black);
 
-  &:before {
-    content:"";
-  }
+		&:before {
+			content:"";
+		}
 
-  &:after {
-    content: "";
-  }
-}
+		&:after {
+			content: "";
+		}
+	}
 
-abbr, acronym {
-  border-bottom: 1px dotted #666;
-  cursor: help;
-}
+	abbr, acronym {
+		border-bottom: 1px dotted #666;
+		cursor: help;
+	}
 
-mark, ins {
-  background-color: #666;
-  text-decoration: none;
-}
+	mark, ins {
+		background-color: #666;
+		text-decoration: none;
+	}
 
-sub, sup {
-  font-size: 0.95rem;
-  height: 0;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
+	sub, sup {
+		font-size: 0.95rem;
+		height: 0;
+		line-height: 0;
+		position: relative;
+		vertical-align: baseline;
+	}
 
-small {
-  font-size: 0.95rem;
-}
+	small {
+		font-size: 0.95rem;
+	}
 
-big {
-  font-size: 1.7rem;
-}
+	big {
+		font-size: 1.7rem;
+	}
 
-hr {
-  background-color: $light-grey;
-  height: 1px;
-  height: 1px;
-}
+	hr {
+		background-color: $light-grey;
+		height: 1px;
+		height: 1px;
+	}
 
 
 /*-----------------------------------------------------------------------------------
   2.3 Anchor Tag Styles
   -----------------------------------------------------------------------------------*/
   a {
-    @extend %transition;
-    // text-decoration: none;
-    color: $black;
+  	@extend %transition;
+  	text-decoration: none;
+  	color: $black;
 
-  &:hover {
-    color: $accent;
+  	&:hover {
+  		color: $accent;
+  	}
   }
-}
 
 
 /*-----------------------------------------------------------------------------------
@@ -178,10 +178,10 @@ hr {
   -----------------------------------------------------------------------------------*/
 
   ul, ol{
-    list-style: square;
-    li {
-      list-style-type: none;
-    }
+  	list-style: square;
+  	li {
+  		list-style-type: none;
+  	}
   }
 
   ul ul, ol ol, ul ol, ol,ul {}
@@ -197,72 +197,72 @@ hr {
   -----------------------------------------------------------------------------------*/
 
   code, kbd, tt, var, pre {
-   font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
- }
+  	font: 13px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  }
 
 
 /*-----------------------------------------------------------------------------------
   2.6 Form Styles
   -----------------------------------------------------------------------------------*/
 
-/* A base reset for the forms */
-button, input, textarea {
-  font-size: 100%;
-  /* Corrects font size not being inherited in all browsers */
-  margin: 0;
-  /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
-  vertical-align: baseline;
-  /* Improves appearance and consistency in all browsers */
-  *vertical-align: middle;
-  /* Improves appearance and consistency in IE6/IE7 */
-  @include box-sizing;
-}
-
-input,textarea {
-  border: 1px solid $light-grey;
-  @extend %transition;
-  &:focus {
-    outline: none;
-    border-color: $dark-grey;
+  /* A base reset for the forms */
+  button, input, textarea {
+  	font-size: 100%;
+  	/* Corrects font size not being inherited in all browsers */
+  	margin: 0;
+  	/* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+  	vertical-align: baseline;
+  	/* Improves appearance and consistency in all browsers */
+  	*vertical-align: middle;
+  	/* Improves appearance and consistency in IE6/IE7 */
+  	@include box-sizing;
   }
-}
 
-input, input[type=text], input[type=email], input[type=url], input[type=password], input[type=search] {
-  border: 1px solid $light-grey;
-  @extend %transition;
-
-  &:focus {
-    outline: none;
-    border-color: $dark-grey;
+  input,textarea {
+  	border: 1px solid $light-grey;
+  	@extend %transition;
+  	&:focus {
+  		outline: none;
+  		border-color: $dark-grey;
+  	}
   }
-}
 
-input {
+  input, input[type=text], input[type=email], input[type=url], input[type=password], input[type=search] {
+  	border: 1px solid $light-grey;
+  	@extend %transition;
 
-    &[type=text] {
-    }
+  	&:focus {
+  		outline: none;
+  		border-color: $dark-grey;
+  	}
+  }
 
-    &[type=email]{
+  input {
 
-    }
+  	&[type=text] {
+  	}
 
-    &[type=url]{
-      
-    }
+  	&[type=email]{
 
-    &[type=password]{
-      
-    }
+  	}
 
-    &[type=search]{
-      
-    }
-}
+  	&[type=url]{
+
+  	}
+
+  	&[type=password]{
+
+  	}
+
+  	&[type=search]{
+
+  	}
+  }
 
 
-textarea {
-  resize: none;
-}
+  textarea {
+  	resize: none;
+  }
 
 
 /*--------------------------------------------------------------------------------
@@ -270,37 +270,137 @@ textarea {
   NEED TO ADD COMMENT FORM STYLES
   NEED TO ADD COMMENT FORM STYLES
   NEED TO ADD COMMENT FORM STYLES
---------------------------------------------------------------------------------*/
-
-
+  --------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------------
  	3.0	Structure styles
-  -----------------------------------------------------------------------------------*/
-
+-----------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------
   4.0 Body Styles (Meant as a global style)
-  -----------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------*/
+
+body {
+    background-color: $light-grey;
+    margin-top: 40px;
+}
+
+#site-wrapper {
+
+    @include responsive('sm') {
+        width: 350px;
+        margin: 0 auto;
+    }
+
+    @include responsive('md') {
+        
+        width: 550px;
+        margin: 0 auto;
+    }
+}
+
 
 
 /*-----------------------------------------------------------------------------------
 	3.0 Header Styles
-  -----------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------*/
+
+#header-wrapper{
+
+    header {
+
+        background-color: $dark-grey;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        #branding-area {
+            @extend %center;
+            color: $white;
+            
+            h1 {
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+
+        }
+
+        #navigation-wrapper {
+
+            @extend %center;
+
+            nav {
+
+                a {
+                    color: $white;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    font-family: $heading-typeface;
+                    padding: 2px;
+
+                    &:hover {
+
+                        background-color: $accent;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 /*-----------------------------------------------------------------------------------
 	4.0 Post Styles
-  -----------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------*/
+
+main#main {
+        background-color: $white;
+
+    article {
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        ul {
+          padding-left: 0px;
+        }
+
+        
+        // a,p,h1,h2,h3,h4,h5,h6 { @extend %text-color; }
+
+
+        header.post-header {
+
+            h1 {
+              margin: 0px;
+
+                a {
+                }
+            }
+
+        }
+
+        .entry {
+
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 20px;
+          line-height: 30px;
+          text-align: justify;
+        
+        }
+    }
+}
 
 
 /*-----------------------------------------------------------------------------------
 	5.0 Comment Styles
-  -----------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------------*/
 
 
 /*-----------------------------------------------------------------------------------
 	6.0 Archive Styles
-  -----------------------------------------------------------------------------------*/
+	-----------------------------------------------------------------------------------*/
 
 
 /*-----------------------------------------------------------------------------------
@@ -310,5 +410,4 @@ textarea {
 /*-----------------------------------------------------------------------------------
 7.0 404 Styles
 -----------------------------------------------------------------------------------*/
-
 
