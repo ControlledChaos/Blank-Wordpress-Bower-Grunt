@@ -1,4 +1,17 @@
+<?php
+/**
+ * Archive Page Template
+ *
+ * @package
+ */
+?>
 <?php get_header(); ?>
+
+
+<div class="pure-g">
+	<div class="pure-u-1 pure-u-md-1-1">
+
+<main id="main">
 
 <?php if(have_posts()) : ?>
 	
@@ -76,6 +89,12 @@
 	<div class="alignleft"><?php next_posts_link('&laquo; Older Entries') ?></div>
 	<div class="alignright"><?php previous_posts_link('Newer Entries &raquo;') ?></div>
 </div>
+
+</main>
+
+	</div>
+</div>
+
 
 <?php get_sidebar(); ?>
 
