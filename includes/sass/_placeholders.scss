@@ -48,3 +48,13 @@
 %text-color {
     color: $text-grey;
 }
+
+%uppercase {
+
+    text-transform: uppercase;
+}
+
+%squeeze {
+    padding-left: 80px;
+    padding-right: 80px;
+}
